@@ -1,0 +1,213 @@
+/* player */
+
+h2{
+    position: relative;
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    top: 50%;
+    transform: translate(0, -50%);
+    font-size: xx-large;
+    font-weight: bolder;
+    text-transform: uppercase;
+    text-shadow: 2px 2px skyblue;
+    grid-area: title;
+    border-bottom: 2px dotted black
+}
+
+
+.playerNameLabel{
+    grid-area: playerNameLabel;
+    text-align: center;
+}
+
+#playerName{
+    grid-area: playerName;
+    text-align: center;
+}
+
+.choosenElLabel{
+    grid-area: choosenElLabel;
+    text-align: center;
+}
+
+.choosenEl{
+    grid-area:choosenEl;
+    text-align: center;
+}
+
+.player1{
+    font-family: fantasy;
+    display: grid;
+    top: 50%;
+    transform: translate(0, 10%);
+    margin-left: 15px;
+    margin-right: 10px;;
+    grid-template-rows: repeat(4, 10%);
+    grid-column: player1-start / player1-end;
+    grid-row: player1-start / player1-end;
+    grid-template-areas: 
+    'playerNameLabel '
+    'playerName'
+    'choosenElLabel'
+    'choosenEl';
+}
+
+.playerNameLabel2{
+    grid-area: playerNameLabel2;
+    text-align: center;
+}
+
+#playerName2{
+    grid-area: playerName2;
+    text-align: center;
+}
+
+.choosenelLabel2{
+    grid-area: choosenelLabel2;
+    text-align: center;
+}
+
+.choosenEl2{
+    grid-area: choosenEl2;
+    text-align: center;
+}
+
+.player2{
+    font-family: fantasy;
+    display: grid;
+    top: 50%;
+    transform: translate(0, 10%);
+    margin-left: 15px;
+    margin-right: 10px;;
+    grid-template-rows: repeat(4, 10%);
+    grid-column: player2-start / player2-end;
+    grid-row: player2-start / player2-end;
+    grid-template-areas: 
+    'playerNameLabel2 '
+    'playerName2 '
+    'choosenelLabel2 '
+    'choosenEl2';
+}
+
+input[type='button']{
+    width: auto;
+    height: 50px;
+    border: 0px;
+    background-color: rgb(248, 241, 231);
+}
+
+#b1{
+    grid-area: b1;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#b2{
+    grid-area: b2;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#b3{
+    grid-area: b3;
+    border-bottom: 2px solid black;
+}
+#b4{
+    grid-area: b4;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#b5{
+    grid-area: b5;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#b6{
+    grid-area: b6;
+    border-bottom: 2px solid black;
+    
+}
+#b7{
+    grid-area: b7;
+    border-right: 2px solid black;
+}
+#b8{
+    grid-area: b8;
+    border-right: 2px solid black;
+}
+#b9{
+    grid-area: b9;
+}
+
+div.btns{
+    top: 50%;
+    transform: translate(0, 30%);
+    display: grid;
+    position: relative;
+    grid-area: btns;
+    grid-template-areas: 
+    'b1 b2 b3'
+    'b4 b5 b6'
+    'b7 b8 b9';
+}
+div.options{
+    display: grid;
+    top: 50%;
+    transform: translate(0, 300%);
+    position: relative;
+    grid-area: options;
+    grid-template-areas: 
+    'nowaGra wyczysc';
+}
+#wyczysc{
+    width: auto;
+    height:auto;
+    grid-area: wyczysc;
+    border-radius: 7px;
+    background: linear-gradient(to top, rgb(240, 202, 148), white);
+}
+
+#wyczysc:hover{
+    background: linear-gradient(to top, rgb(255, 242, 228), white);
+}
+
+#wyczysc:active{
+    background: linear-gradient(to top, rgb(228, 155, 76), white);
+    padding-bottom: 1px;
+
+}
+#nowaGra{
+    width: auto;
+    height:auto;
+    grid-area: nowaGra;
+    border-radius: 7px;
+    background: linear-gradient(to top, rgb(240, 202, 148), white);
+}
+#nowaGra:hover{
+    background: linear-gradient(to top, rgb(255, 242, 228), white);
+}
+
+#nowaGra:active{
+    background: linear-gradient(to top, rgb(228, 155, 76), white);
+    padding-bottom: 1px;
+
+}
+div#content{
+    display: grid;
+    position: absolute;
+    margin-top: 2%;
+    left: 50%;
+    transform: translate(-50%, 0);
+    background-color: rgb(248, 241, 231);
+    border: 1px solid rgb(199, 187, 170);
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px 7px rgb(248, 241, 231);
+    margin-right: 5%;
+    margin-left: 4%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: 
+    'title title title'
+    'player1 btns player2'
+    'player1 btns player2'
+    'player1 btns player2'
+    '. options .';
+}

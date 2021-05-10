@@ -1,0 +1,63 @@
+#one{
+    grid-area: onePlayerOption;
+}
+
+#two{
+    grid-area: twoPlayerOption;
+}
+
+label.playersAmount{
+    font-family: fantasy;
+}
+p.firstPlayerName{
+    font-family: fantasy;
+    grid-area: p-firstPlayerName;
+    
+}
+p.secondPlayerName{
+    font-family: fantasy;
+    grid-area: p-secondPlayerName;
+}
+input.firstPlayerName{
+    grid-area: input-firstPlayerName;
+}
+
+input.secondPlayerName{
+    grid-area: input-secondPlayerName;
+}
+input[type="submit"]{
+    background: linear-gradient(to top,  rgb(79, 170, 255), rgb(170, 214, 255));
+    border-radius: 10px;
+
+    height: 30px;
+    grid-area: inpSub;
+}
+input[type="submit"]:hover{
+    background: linear-gradient(to top,  rgb(116, 188, 255), rgb(170, 214, 255));        
+}
+input[type="submit"]:active{
+    padding: 1px;
+    background: linear-gradient(to top,  rgb(79, 111, 255), rgb(170, 214, 255));
+}
+
+.settings{
+    border: 1px solid black;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    border-radius: 8px;
+    padding: 15px;
+
+    background-color: rgb(217, 237, 255);
+    grid-gap: 6px;
+    width: 400px;
+    height: 200px;
+    box-shadow: 0px 3px 10px 2px rgb(24, 97, 161);
+    display: grid;
+    grid-template-areas: 
+    'onePlayerLabel twoPlayersLabel'
+    'onePlayerOption twoPlayerOption'
+    'p-firstPlayerName p-secondPlayerName'
+    'input-firstPlayerName input-secondPlayerName'
+    'inpSub inpSub';
+}
